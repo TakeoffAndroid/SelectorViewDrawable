@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".MainActivity"
+              android:gravity="center"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Background Selector"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_bg_selector"
+        android:textColor="@color/white"
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text Selector"
+        android:id="@+id/btn_txt_selector"
+        android:background="@color/blue"
+        android:layout_marginTop="20dp"
+/>
+
+</LinearLayout>
