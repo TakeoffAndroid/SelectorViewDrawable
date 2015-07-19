@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.StateListDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -28,7 +29,15 @@ public class MainActivity extends ActionBarActivity {
             btnTxtSelector = (Button)findViewById( R.id.btn_txt_selector );
 
 
-            btnBgSelector.setBackgroundDrawable (selectorBackgroundColor (this, getResources ().getColor (R.color.blue), getResources ().getColor (R.color.orange)));
+            if(Build.VERSION.SDK_INT >= 16) {
+
+                btnBgSelector.setBackground(selectorBackgroundColor(this, getResources().getColor(R.color.blue), getResources().getColor(R.color.orange)));
+
+            } else {
+
+                btnBgSelector.setBackgroundDrawable (selectorBackgroundColor(this, getResources().getColor(R.color.blue), getResources().getColor(R.color.orange)));
+
+            }
 
             btnTxtSelector.setTextColor (selectorText (this, getResources ().getColor (R.color.white), getResources ().getColor (R.color.orange)));
         }
